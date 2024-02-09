@@ -8,7 +8,7 @@ arr[4] = 5
 //중복 제거 필요.
 
 for i in stride(from: 5, to: n + 1, by: 1){
-    arr[i] = arr[i - 1] + arr[i - 2]
+    arr[i] = (arr[i - 1] + arr[i - 2]) % 10007
 }
 
 print(arr[n])
