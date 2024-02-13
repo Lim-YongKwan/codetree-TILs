@@ -13,7 +13,6 @@ for i in stride(from: 0, to: arr.count, by: 1) {
     dic[temp] = 0
 }
 
-
 for i in stride(from: 0, to: arr.count, by: 1) {
     var temp = arr[i]
     dic[temp]! += 1
@@ -28,7 +27,6 @@ for i in stride(from: 0, to: arr.count, by: 1) {
         // print("answer : \(dic[temp])")
         answer += dic[temp]! * (dic[temp]! - 1) / 2
     }
-    exist[temp] = 1
     exist[arr[i]] = 1
 }
 
