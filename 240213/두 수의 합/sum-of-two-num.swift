@@ -20,11 +20,11 @@ for i in stride(from: 0, to: arr.count, by: 1) {
 
 for i in stride(from: 0, to: arr.count, by: 1) {
     var temp = k - arr[i]
+
     if(dic[temp] == 1 && dic[temp] != nil && exist[temp] == nil) {
-        answer += dic[temp]! * (dic[temp]! + 1) / 2
+        answer += 1
     }
-    else if(dic[temp] != 0 && dic[temp] != nil && exist[temp] == nil) {
-        // print("answer : \(dic[temp])")
+    else if(dic[temp] != nil && dic[temp] != 1 && dic[temp] != 0 && exist[temp] == nil) {
         answer += dic[temp]! * (dic[temp]! - 1) / 2
     }
     exist[arr[i]] = 1
