@@ -20,7 +20,7 @@ int main() {
     cout.precision(4);
 
     for(auto iter = mp.begin(); iter != mp.end(); iter++) {
-        cout<<iter->first<<" "<< (round)((double)iter->second / total * 100)<<endl;
+        cout<<iter->first<<" "<< (round)((double)iter->second * 100 / total)<<endl;
     }
     
     return 0;
