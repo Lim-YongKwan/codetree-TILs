@@ -8,7 +8,7 @@ using namespace std;
 int main() {
     int T;
     cin>>T;
-    map<string ,int> mp;
+    map<string ,double> mp;
     double total = 0;
     for(int testcase = 0; testcase < T; testcase++) {
         string s;
@@ -20,7 +20,7 @@ int main() {
     cout.precision(4);
 
     for(auto iter = mp.begin(); iter != mp.end(); iter++) {
-        cout<<iter->first<<" "<< (round)((double)iter->second * 100 / total)<<endl;
+        cout<<iter->first<<" "<< (round)(iter->second * 100 / total)<<endl;
     }
     
     return 0;
