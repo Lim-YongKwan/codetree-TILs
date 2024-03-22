@@ -1,8 +1,12 @@
 n, k = map(int, input().split())
 arr = [0] + list(map(int, input().split()))
-
 sum_A = [0] * (n+1)
-for i in range(n,0+k-1,-1):
-    for j in range(k):
-        sum_A[i] += arr[i-j]
-print(max(sum_A))
+answer = [0] * (n-k+1)
+
+for i in range(n):
+    sum_A[i] = sum_A[i-1] + arr[i]
+
+for j in range(n-k+1):
+    answer[j] = sum_A[j+k] - arr[j] 
+
+print(max(answer))
