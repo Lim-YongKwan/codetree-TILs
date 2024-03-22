@@ -7,6 +7,6 @@ for i in range(n):
     sum_A[i] = sum_A[i-1] + arr[i]
 
 for j in range(n-k+1):
-    answer[j] = sum_A[j+k] - arr[j] 
+    answer[j] = sum_A[j+k] - sum_A[j]
 
 print(max(answer))
