@@ -16,7 +16,7 @@ def find_min_idx(target):
 
 for i in range(m):
     answer = find_min_idx(arr2[i])
-    if answer <= n and arr[answer] == arr2[i]:
+    if answer <= n+1 and arr[answer] == arr2[i]:
         print(answer+1)
     else:
         print(-1)
