@@ -21,3 +21,5 @@ for i in range(len(arr2)):
     if [2, 2, 2, 2, 2] in arr2[i]:
         print(2)
         print(arr2[i][0]+1, arr2[i][1]+1)
+    else:
+        print(0)
