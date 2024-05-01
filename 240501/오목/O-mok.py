@@ -18,11 +18,11 @@ for i in range(len(arr2)):
     if [1, 1, 1, 1, 1] in arr2[i]:
         print(1)
         print(arr2[i][0]+1, arr2[i][1]+1)
-        return
+        break
     if [2, 2, 2, 2, 2] in arr2[i]:
         print(2)
         print(arr2[i][0]+1, arr2[i][1]+1)
-        return
+        break
     else:
         print(0)
-        return
+        break
