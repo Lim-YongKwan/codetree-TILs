@@ -2,7 +2,7 @@ n = int(input())
 arr = []
 arr2 = []
 global answer
-answer = 0
+answer = -1
 sum_val = 0
 isVisited = [0 for _ in range(n)]
 
