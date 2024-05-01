@@ -1,5 +1,8 @@
 arr = []
 arr2 = []
+black_win = 0
+white_win = 0
+
 for i in range(19):
     arr.append(list(map(int, input().split())))
 
@@ -16,13 +19,13 @@ for i in range(15):
 
 for i in range(len(arr2)):
     if [1, 1, 1, 1, 1] in arr2[i]:
+        black_win = 1
         print(1)
         print(arr2[i][0]+1, arr2[i][1]+1)
-        break
     if [2, 2, 2, 2, 2] in arr2[i]:
+        white_win = 1
         print(2)
         print(arr2[i][0]+1, arr2[i][1]+1)
-        break
-    else:
-        print(0)
-        break
+
+if black_win ==0 and white_win == 0:
+    print(0)
