@@ -6,7 +6,7 @@ arr = [
 answer = 0
 
 def isInborder(x, y):
-    if(x >= 0 and x < m and y >= 0 and y < n):
+    if(x >= 0 and x < n and y >= 0 and y < m):
         return True
     return False
 
@@ -21,11 +21,13 @@ def is_LEE_True(x, y):
         nx2 = nx + dx[i]
         ny2 = ny + dy[i]
         if (isInborder(nx,ny) == False):
-            return False
+            continue
         if (isInborder(nx2,ny2) == False):
-            return False        
+            continue
         else:
-            answer += 1
+            if arr[nx][ny] == "E" and arr[nx2][ny2] == "E":
+                #print(x,y, nx, ny, nx2, ny2)
+                answer += 1
     return answer
         
 
