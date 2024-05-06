@@ -3,13 +3,13 @@ arr = [ list(map(int, input().split())) for _ in range(n)]
 
 max_sum = 0
 sum_val = 0
-second_max = 0
 sum_val2 = 0
 total_sum = 0
 
 for i in range(n):
     for j in range(n-2):
         sum_val = arr[i][j] + arr[i][j+1] + arr[i][j+2]
+        second_max = 0
         for k in range(n):
             for l in range(n-2):
                 if i == k:
